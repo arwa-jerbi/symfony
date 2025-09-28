@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Détails de l'auteur</title>
+</head>
+<body>
+    <h1>Détails de l'auteur</h1>
+
+    <p><strong>Nom :</strong> {{ author.username | upper }}</p>
+    <p><strong>Email :</strong> {{ author.email }}</p>
+    <p><strong>Nombre de livres :</strong> {{ author.nb_books }}</p>
+    <p><img src="{{ author.picture }}" alt="{{ author.username }}" width="200"></p>
+
+    {# CORRECTION : Utiliser 'authors_list' au lieu de 'list_authors' #}
+    <p><a href="{{ path('authors_list') }}">Retour à la liste</a></p>
+</body>
+</html>
