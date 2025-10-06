@@ -51,6 +51,7 @@ final class AuthorController extends AbstractController
         ]);
     }
 
+
     #[Route('/listAuthors', name: 'listAuthors')]
     public function listAuthors(): Response
     {
@@ -70,6 +71,7 @@ final class AuthorController extends AbstractController
        
     }
 
+    
    #[Route('/authorDetails/{id}', name: 'authorDetails')]
     public function authorDetails(int $id): Response
     {
