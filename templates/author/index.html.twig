@@ -1,0 +1,23 @@
+<h1>Liste des auteurs</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>nom</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for a in authors %}
+            <tr>
+                <td>{{ a.nom }}</td>
+                <td>{{ a.email }}</td>
+                <td>-</td> <!-- actions vide pour l'instant -->
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Aucun enregistrement trouvé</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

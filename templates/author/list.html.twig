@@ -1,0 +1,24 @@
+<h1>List of Authors</h1>
+
+<h1>List of Authors</h1>
+
+{% if authors is empty %}
+    <p>No authors found.</p>
+{% else %}
+<h3> Total Authors: {{ authors|length }} </h3>
+{% for a in authors %}
+
+<li>
+<img src="{{ asset(a.picture) }}" alt="photo" width="100px">
+<strong> {{ a.username|upper }}</strong>
+<p>Email: {{ a.email }}</p>
+<p>Number of Books: {{ a.nb_books }}</p>
+<a href="{{ path('authorDetails', { 'id': a.id }) }}">View Details</a>
+<br><br><br>
+</li>
+  
+{% endfor %}
+<h2> total books: {{ totalbooks }} </h2>
+
+{% endif %}
+
